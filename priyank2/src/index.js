@@ -16,7 +16,7 @@ import Detailpage from './Detailpage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-     <div className="container"> 
+     {/* <div className="container"> 
      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -26,7 +26,7 @@ root.render(
           </Route>
         </Routes>
       </BrowserRouter> 
-     </div> 
+     </div>  */}
     {/* <Display/>  */}
     {/* <Calculator/> */}
     
