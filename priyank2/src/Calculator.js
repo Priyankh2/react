@@ -43,7 +43,7 @@ export default function () {
                     <button className="calculator_key calculator_key--enter" value="=" onClick={()=>{HandleCalculate(input)}}>=</button>
                 </div>
             </div>
-            <h1>hellow</h1>
+            {/* //hellow world */}
         </>
     );
 }
