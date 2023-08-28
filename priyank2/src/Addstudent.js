@@ -35,15 +35,15 @@ export default function Addstudent() {
                     setdata({ ...data, Email: e.target.value });
                 }} />
             </div>
-            {/* <button className="btn btn-primary" onClick={
+              <button className="btn btn-primary" onClick={()=>{
                 fetch("https://64e2cf01bac46e480e77c54f.mockapi.io/animal/animal", {
                     method: "post",
                     body: JSON.stringify(data),
                     headers: { "Content-Type": "application/json" }
-                }).then((res) => {
+                }).then(() => {
                     navigate("/Api2")
                 })
-            }>Addstudent</button> */}
+               } }>Addstudent</button>  
         </>
     );
 }

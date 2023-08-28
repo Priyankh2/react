@@ -27,10 +27,11 @@ root.render(
             <Route path="/content" element={<Content />} />
             <Route path="/CardView" element={<CardView />} />
             <Route path="/Addstudent" element={<Addstudent/>}/>
+            <Route path="/animal/:id" element={<Detailpage/>}/>
           </Route>
         </Routes>
       </BrowserRouter> 
-      <Addstudent/>
+      {/* <Addstudent/> */}
      </div>  
     {/* <Display/>  */}
     {/* <Calculator/> */}

@@ -21,7 +21,7 @@ export default function Api2() {
                         <h5 class="card-title">{hellow.name}</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         {/* <a href={hellow.avatar} class="btn btn-primary">DetailPage</a> */}
-                        <Link to={"animal/"+hellow.id} className='btn btn-info'>DetailPage</Link>
+                        <Link to={"/animal/"+hellow.id} className='btn btn-info'>DetailPage</Link>
                         <button onClick={()=>{
                             fetch("https://64e2cf01bac46e480e77c54f.mockapi.io/animal/animal"+"/"+hellow.id,{method : "Delete"});
                             setData([
