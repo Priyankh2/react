@@ -30,12 +30,12 @@ root.render(
     {/* <Display/>  */}
     {/* <Calculator/> */}
     
-    {/* <BrowserRouter>
+     <BrowserRouter>
     <Routes>
       <Route index element={<Api2/>}/>
         <Route path='animal/:id' element={<Detailpage/>}/>
     </Routes>
-    </BrowserRouter> */}
+    </BrowserRouter> 
     {/* <UseState/> */}
     {/* <CardView/> */}
     {/* <Header/> */}
