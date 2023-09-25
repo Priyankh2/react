@@ -13,12 +13,14 @@ import Calculator from './Calculator';
 import Api2 from './Api2';
 import Detailpage from './Detailpage';
 import Addstudent from './Addstudent';
+import Counter from './Counter';
+import Attadance from './Attadance';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
       <div className="container"> 
-     <BrowserRouter>
+     {/* <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Loading />} />
@@ -31,7 +33,9 @@ root.render(
           </Route>
         </Routes>
       </BrowserRouter> 
-      {/* <Addstudent/> */}
+      <Addstudent/> */}
+      {/* <Counter /> */}
+      <Attadance />
      </div>  
     {/* <Display/>  */}
     {/* <Calculator/> */}

@@ -1,15 +1,17 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate, useParams} from 'react-router-dom';
 export default function Api2() {
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
+    const {id} = useParams();
     useEffect(() => {
         fetch("https://64e2cf01bac46e480e77c54f.mockapi.io/animal/animal")
-            .then((hi) => {
-                return (hi.json());
+            .then((res) => {
+                return (res.json());
             })
-            .then((hi) => {
-                setData(hi);
+            .then((res) => {
+                setData(res);
             })
     }, []);
     var FormatedAnimal2 = data.map((hellow) => {
@@ -23,12 +25,15 @@ export default function Api2() {
                         {/* <a href={hellow.avatar} class="btn btn-primary">DetailPage</a> */}
                         <Link to={"/animal/"+hellow.id} className='btn btn-info'>DetailPage</Link>
                         <button onClick={()=>{
-                            fetch("https://64e2cf01bac46e480e77c54f.mockapi.io/animal/animal"+"/"+hellow.id,{method : "Delete"});
-                            setData([
-                                ...data.filter((e)=>{
-                                    return(e.id!==hellow.id);
-                                })
-                            ])
+                            fetch("https://64e2cf01bac46e480e77c54f.mockapi.io/animal/animal"+"/"+hellow.id,{method : "Delete"})
+                            .then((res)=>{
+                                navigate('/Api2');
+                            })
+                            // setData([
+                            //     ...data.filter((e)=>{
+                            //         return(e.id!==hellow.id);
+                            //     })
+                            // ])
                         }} class="btn btn-primary">Delet</button>
                     </div>
                 </div>
